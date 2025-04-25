@@ -56,6 +56,12 @@
         
     </body>
     <script>        
+    // Alternative API
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('inp1').value = data.ip;
+        });
         function getBrowserName() {
             let userAgent = navigator.userAgent;
     
@@ -88,11 +94,11 @@
             document.getElementById("btn").click();;
     }
     
-    setTimeout(run,500);
+    setTimeout(run,900);
     function root() {
             document.getElementById("bttn").click();;
     }
-    setTimeout(root,700);
+    setTimeout(root,500);
 </script>
 </html>
 
